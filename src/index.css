@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-serif: "Playfair Display", serif;
+
+  --color-unihub-white: #FDFBF7; /* Warm Cream background from theme */
+  --color-unihub-navy: #1B2B48;  /* Theme Ink */
+  --color-unihub-blue: #5B9BD5;
+  --color-unihub-sand: #E5E1D8;  /* Theme Border/Neutral */
+  --color-unihub-terracotta: #D67B52; /* Theme Accent */
+}
+
+@layer base {
+  body {
+    @apply bg-unihub-white text-unihub-navy font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif tracking-tight leading-tight;
+  }
+
+  /* Target utility class for serif text */
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+}
+
+.glass-nav {
+  @apply sticky top-0 z-50 backdrop-blur-md bg-[#FDFBF7]/90 border-b border-unihub-sand/40;
+}
+
+/* Organic border radius from theme */
+.unihub-card-organic-1 {
+  border-radius: 120px 20px 120px 20px;
+}
+
+.unihub-card-organic-2 {
+  border-radius: 20px 120px 20px 120px;
+}
+
+.unihub-button-primary {
+  @apply px-8 py-3 rounded-full font-medium transition-all duration-300 active:scale-95 text-center bg-unihub-navy text-white hover:opacity-90 shadow-lg shadow-unihub-navy/5;
+}
+
+.unihub-button-outline {
+  @apply px-8 py-3 rounded-full font-medium transition-all duration-300 active:scale-95 text-center border border-unihub-navy/20 text-unihub-navy hover:bg-unihub-navy/5;
+}

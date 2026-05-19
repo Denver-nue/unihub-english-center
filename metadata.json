@@ -1,0 +1,6 @@
+{
+  "name": "Unihub English Teaching Center",
+  "description": "Premium English education for grade 1-3 and college students in Lai Xá, Hà Nội. Minimalist, Apple-inspired design.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
